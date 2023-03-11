@@ -8,9 +8,10 @@ import { environment } from 'src/environments/environment.development';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent, HomepageComponent],
+  declarations: [AppComponent, LoginComponent, RegistrationComponent, HomepageComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
