@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "books-exchanger-c7e00": {
+      "hosting": {
+        "books-exchanger": [
+          "books-exchanger-c7e00"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "books-exchanger-c7e00"
+  }
+}

@@ -9,13 +9,13 @@
             <p class="quote-author">~ Jarosław Iwaszkiewicz</p>
             <div class="container-form-login">
                 <p>
-                    <input type="email" class="form__input" placeholder="email">
+                    <input type="email" class="form__input" placeholder="email" [(ngModel)]="email">
                 </p>
                 <p>
-                    <input type="password" class="form__input" placeholder="password">
+                    <input type="password" class="form__input" placeholder="password" [(ngModel)]="password">
                 </p>
                 <div class="container__buttons">
-                    <button class="button">Log in</button>
+                    <button class="button" (click)="login()">Log in</button>
                     <button class="button" routerLink="/registration">Sign up</button>
                 </div>
             </div>

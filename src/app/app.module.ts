@@ -9,13 +9,27 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegistrationComponent, HomepageComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegistrationComponent,
+    HomepageComponent,
+    PageNotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment),
+    AngularFireModule.initializeApp(environment.firebase),
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent],
