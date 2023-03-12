@@ -4,7 +4,7 @@
   background-size: cover;
   &-overlay {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.62);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
   }
 }
@@ -62,5 +62,15 @@
   &:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  &-author {
+    text-align: end;
+    max-width: 500px;
+    width: 100%;
   }
 }
