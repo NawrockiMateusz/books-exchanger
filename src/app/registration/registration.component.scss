@@ -1,0 +1,67 @@
+.section {
+  height: 100vh;
+  background: url(../../assets/images/loginBackground.jpg) no-repeat center;
+  background-size: cover;
+  &-overlay {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+}
+
+.container {
+  max-width: 50%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  &-logo {
+    &__image {
+      width: 60%;
+    }
+  }
+  &-form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-login {
+      display: flex;
+      flex-direction: column;
+      max-width: 550px;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(218, 218, 218, 0.376);
+      padding: 30px 16px;
+    }
+  }
+}
+
+.form {
+  &__input {
+    background: none;
+    border: none;
+    color: white;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid white;
+    padding: 6px 2px;
+    max-width: 320px;
+    width: 100%;
+    &::placeholder {
+      color: rgb(213, 213, 213);
+    }
+  }
+}
+
+.button {
+  padding: 6px 30px;
+  margin: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
