@@ -78,6 +78,7 @@
             "browserTarget": "books-exchanger:build"
           }
         },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
