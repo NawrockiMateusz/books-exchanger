@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { CanActivate, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private fireauth: AngularFireAuth) {}
 
-  canActivate(): boolean {
-    const idToken = localStorage.getItem('id_token');
-    if (idToken) {
+  async canActivate() {
+    const token = localStorage.getItem('id_token');
+    const user = await this.fireauth.currentUser;
+
+    if (user && token) {
       return true;
     } else {
       this.router.navigate(['/login']);
