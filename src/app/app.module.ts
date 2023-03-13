@@ -15,6 +15,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { TokenInterceptor } from './token.interceptor';
     RegistrationComponent,
     HomepageComponent,
     PageNotFoundComponent,
+    VerifyEmailComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,22 +9,23 @@
             <p class="quote-author">~ Jarosław Iwaszkiewicz</p>
             <form class="form" (ngSubmit)="login()">
                 <p>
-                    <input type="email" class="form__input" placeholder="email" [(ngModel)]="email">
+                    <input type="email" class="form__input" placeholder="email" [(ngModel)]="email" name="email">
                 </p>
                 <p>
-                    <input type="password" class="form__input" placeholder="password" [(ngModel)]="password">
+                    <input type="password" class="form__input" placeholder="hasło" [(ngModel)]="password"
+                        name="password">
                 </p>
                 <div class="container__buttons">
-                    <button class="button">Log in</button>
+                    <button class="button">Zaloguj się</button>
                 </div>
             </form>
             <footer class="footer">
-                <p class="footer-registration">Don’t have an account?
+                <p class="footer-registration">Nie posiadasz konta?
                     <span class="link" routerLink="/registration">
-                        Sign up
+                        Zarejestruj się
                     </span>
                 </p>
-                <p class="footer-forgot" class="link">Forgot Password?</p>
+                <p class="footer-forgot" class="link" routerLink="/forgot-password">Zapomniałeś hasła?</p>
             </footer>
         </div>
     </div>

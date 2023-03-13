@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { User } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { catchError, from, pipe, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +22,12 @@ export class AuthService {
         if (userCredential.user) {
           userCredential.user.getIdToken().then((idToken) => {
             localStorage.setItem('id_token', idToken);
-            this.router.navigate(['/home']);
+
+            if (userCredential.user?.emailVerified === true) {
+              this.router.navigate(['/home']);
+            } else {
+              this.router.navigate(['/verify-email']);
+            }
           });
         }
       })
@@ -33,9 +38,10 @@ export class AuthService {
 
   register(email: string, password: string) {
     this.fireauth.createUserWithEmailAndPassword(email, password).then(
-      () => {
+      (res) => {
         alert('Registration successful!');
         this.router.navigate(['/login']);
+        this.sendEmailForVerification(res.user);
       },
       (err) => {
         alert(err.message);
@@ -51,6 +57,28 @@ export class AuthService {
         this.router.navigate(['/login']);
       },
       (err) => {
+        alert(err.message);
+      }
+    );
+  }
+
+  forgotPassword(email: string) {
+    this.fireauth.sendPasswordResetEmail(email).then(
+      () => {
+        this.router.navigate(['/verify-email']);
+      },
+      (err) => {
+        alert(err.message);
+      }
+    );
+  }
+
+  sendEmailForVerification(user: any) {
+    user.sendEmailVerification().then(
+      (res: any) => {
+        this.router.navigate(['/verify-email']);
+      },
+      (err: any) => {
         alert(err.message);
       }
     );

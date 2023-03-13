@@ -8,19 +8,20 @@
             <p>Podaj poniższe dane, aby założyć konto:</p>
             <form class="form" (ngSubmit)="register()">
                 <p>
-                    <input type="email" class="form__input" placeholder="email" [(ngModel)]="email">
+                    <input type="email" class="form__input" placeholder="email" [(ngModel)]="email" name="email">
                 </p>
                 <p>
-                    <input type="password" class="form__input" placeholder="password" [(ngModel)]="password">
+                    <input type="password" class="form__input" placeholder="hasło" [(ngModel)]="password"
+                        name="password">
                 </p>
                 <div class="container__buttons">
-                    <button class="button">Log in</button>
+                    <button class="button">Zarejestruj się</button>
                 </div>
             </form>
             <footer class="footer">
-                <p class="footer-registration">Already have an account?
+                <p class="footer-registration">Posiadasz już konto?
                     <span class="link" routerLink="/login">
-                        Log in
+                        Zaloguj się
                     </span>
                 </p>
             </footer>
