@@ -7,7 +7,7 @@
         <div class="container container-form">
             <p class="quote">„Powiedz mi, jakie książki masz w domu, a powiem ci, kim jesteś.”</p>
             <p class="quote-author">~ Jarosław Iwaszkiewicz</p>
-            <div class="container-form-login">
+            <form class="form" (ngSubmit)="login()">
                 <p>
                     <input type="email" class="form__input" placeholder="email" [(ngModel)]="email">
                 </p>
@@ -15,10 +15,17 @@
                     <input type="password" class="form__input" placeholder="password" [(ngModel)]="password">
                 </p>
                 <div class="container__buttons">
-                    <button class="button" (click)="login()">Log in</button>
-                    <button class="button" routerLink="/registration">Sign up</button>
+                    <button class="button">Log in</button>
                 </div>
-            </div>
+            </form>
+            <footer class="footer">
+                <p class="footer-registration">Don’t have an account?
+                    <span class="link" routerLink="/registration">
+                        Sign up
+                    </span>
+                </p>
+                <p class="footer-forgot" class="link">Forgot Password?</p>
+            </footer>
         </div>
     </div>
 </section>

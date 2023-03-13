@@ -13,17 +13,12 @@ export class LoginComponent {
   constructor(private auth: AuthService) {}
 
   login() {
-    if (this.email === '') {
-      alert('Please enter email');
-      return;
+    if (this.email && this.password) {
+      this.auth.login(this.email, this.password);
+      this.email = '';
+      this.password = '';
+    } else {
+      alert('Please check email or password.');
     }
-    if (this.password === '') {
-      alert('Please enter password');
-      return;
-    }
-
-    this.auth.login(this.email, this.password);
-    this.email = '';
-    this.password = '';
   }
 }
