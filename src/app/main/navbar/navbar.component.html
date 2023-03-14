@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="container__logo"><img routerLink="/home" class="logo" src="../../../assets/images/Logo EK - black.svg"
+            alt="logo - black book with E and K letters"></div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__listItem"><a routerLink="../home" class="nav__listItem--link">Strona główna</a></li>
+            <li class="nav__listItem"><a routerLink="../search" class="nav__listItem--link">Szukaj</a></li>
+            <li class="nav__listItem"><a routerLink="../messages" class="nav__listItem--link">Wiadomości</a></li>
+            <div class="dropdown">
+                <li class="nav__listItem nav__listItem--special ">Dodaj
+                    <i class="fa-solid fa-caret-down icon__dropdown"></i>
+                </li>
+                <div class="dropdown-content">
+                    <a routerLink="../replacement">na wymianę</a>
+                    <a routerLink="../wishlist">aktualnie szukam</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="dropdown">
+        <div class="container__profile ">
+            <img class="profile__photo" src="../../../assets/images/profile.jpg" alt="profile photo">
+            <i class="fa-solid fa-caret-down icon__dropdown"></i>
+        </div>
+        <div class="dropdown-content">
+            <a routerLink="../profile">Mój profil</a>
+            <a class="logout" (click)="logout()">Wyloguj się</a>
+        </div>
+    </div>
+
+
+</header>

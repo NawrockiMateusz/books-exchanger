@@ -17,6 +17,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { NavbarComponent } from './main/navbar/navbar.component';
+import { WelcomeComponent } from './main/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     PageNotFoundComponent,
     VerifyEmailComponent,
     ForgotPasswordComponent,
+    NavbarComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
