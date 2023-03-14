@@ -7,7 +7,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment.development';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { MainComponent } from './main/main.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -23,7 +23,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    HomepageComponent,
+    MainComponent,
     PageNotFoundComponent,
     VerifyEmailComponent,
     ForgotPasswordComponent,

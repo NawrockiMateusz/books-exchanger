@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss'],
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
 })
-export class HomepageComponent {
+export class MainComponent {
   constructor(private auth: AuthService) {}
 
   logout() {
