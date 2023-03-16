@@ -30,7 +30,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'auctio',
+    path: 'auction',
     component: AuctionComponent,
     canActivate: [AuthGuard],
   },

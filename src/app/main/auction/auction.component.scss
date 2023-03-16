@@ -1,0 +1,40 @@
+.main {
+  height: calc(100vh - 80px);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search__photo {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(201, 201, 201);
+}
+
+.button__container,
+.buttons__container {
+  margin: 25px;
+}
+
+.button {
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px 25px;
+  margin: 5px;
+  transition: 0.5s;
+  &:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+}
+
+.section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
