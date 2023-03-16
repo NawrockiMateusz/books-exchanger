@@ -10,9 +10,9 @@ export class AuthGuard implements CanActivate {
 
   async canActivate() {
     const token = localStorage.getItem('id_token');
-    // const user = await this.fireauth.currentUser;
+    const user = await this.fireauth.currentUser;
 
-    if (token != null) {
+    if (token != null && user) {
       return true;
     } else {
       this.router.navigate(['/login']);
