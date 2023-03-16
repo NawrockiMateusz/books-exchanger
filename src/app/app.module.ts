@@ -18,12 +18,12 @@ import { TokenInterceptor } from './token.interceptor';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { NavbarComponent } from './main/navbar/navbar.component';
-import { WelcomeComponent } from './main/welcome/welcome.component';
 import { ReplacementComponent } from './main/replacement/replacement.component';
 import { WishlistComponent } from './main/wishlist/wishlist.component';
 import { SearchingComponent } from './main/searching/searching.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { AuctionComponent } from './main/auction/auction.component';
+import { MessagesComponent } from './main/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +35,12 @@ import { AuctionComponent } from './main/auction/auction.component';
     VerifyEmailComponent,
     ForgotPasswordComponent,
     NavbarComponent,
-    WelcomeComponent,
     ReplacementComponent,
     WishlistComponent,
     SearchingComponent,
     ProfileComponent,
     AuctionComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

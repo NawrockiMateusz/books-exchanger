@@ -1,0 +1,53 @@
+.main {
+  overflow: hidden;
+  display: flex;
+  height: calc(100vh - 80px);
+  &__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Text {
+      font-size: 2em;
+      padding: 20px;
+      max-width: 80%;
+      text-align: center;
+    }
+    &Button {
+      border: 3px solid white;
+      font-size: 1.5em;
+      padding: 15px 70px;
+      background: none;
+      color: white;
+      transition: 0.5s;
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+      }
+    }
+
+    &Quote {
+      padding-top: 150px;
+      max-width: 80%;
+      font-size: 1.3em;
+      text-align: center;
+      margin-bottom: 150px;
+    }
+
+    &Photo {
+      width: 100%;
+    }
+
+    &--left {
+      background-color: black;
+      width: 50%;
+      color: white;
+    }
+    &--right {
+      width: 50%;
+      color: black;
+      justify-content: space-between;
+    }
+  }
+}
