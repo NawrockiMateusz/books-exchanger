@@ -20,11 +20,11 @@
         </div>
     </div>
     <div class="search__result">
-        <div class="search__item">
+        <div class="search__item" *ngFor="let book of booksList">
             <img src="https://images.unsplash.com/photo-1609866138210-84bb689f3c61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=769&q=80"
                 alt="" class="search__photo">
-            <p class="search__title"><q>Harry Potter</q></p>
-            <p class="search__author">J.K. Rowling</p>
+            <p class="search__title"><q>{{book.title}}</q></p>
+            <p class="search__author">{{book.author}}</p>
         </div>
     </div>
 </main>
